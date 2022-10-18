@@ -1,0 +1,17 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.2;
+  padding-left: 0.625rem;
+  padding-right: 0.25rem;
+  min-width: 14.5rem;
+  height: 100vh;
+  color: white;
+  background-color: #040404;
+}
+
+.sidebar__logo {
+  height: 4.25rem;
+  padding: 0.625rem;
+  margin-right: auto;
+}
