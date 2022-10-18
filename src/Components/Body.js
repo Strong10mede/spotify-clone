@@ -18,6 +18,13 @@ function Body({ spotify }) {
           <p>{discover_weekly?.description}</p>
         </div>
       </div>
+      <div className="body__songs">
+        <div className="body__icons">
+          <PlayCircleFilledIcon className="body__shuffle" />
+          <FavoriteIcon fontSize="large" />
+          <MoreHorizIcon />
+        </div>
+      </div>
     </div>
   );
 }
