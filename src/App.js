@@ -29,6 +29,12 @@ function App() {
           token: _token,
         });
       });
+      spotify.getUserPlaylists().then((playlists) =>
+        dispatch({
+          type: "SET_PLAYLIST",
+          playlists: playlists,
+        })
+      );
     }
   }, [token, dispatch]);
   console.log("user reducer:: ", user);
