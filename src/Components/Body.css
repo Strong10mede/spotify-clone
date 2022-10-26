@@ -9,6 +9,10 @@
   background-color: rgb(91, 87, 115);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .body__info {
   display: flex;
   align-items: flex-end;
@@ -32,4 +36,35 @@
 
 .body__infoText > p {
   font-size: 1rem;
+}
+
+.body__icons {
+  display: flex;
+  align-items: center;
+}
+
+.body__icons > .MuiSvgIcon-root {
+  margin-right: 1.25rem;
+}
+
+.body__songs {
+  z-index: 1;
+  margin: 1.25rem -1.75rem;
+}
+
+.body__shuffle {
+  font-size: 5rem !important;
+  margin-left: 3rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.body__shuffle:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.08);
+}
+
+.body__blankSpace {
+  height: 4vh;
+  color: transparent;
 }

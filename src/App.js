@@ -36,6 +36,18 @@ function App() {
         })
       );
 
+      dispatch({
+        type: "SET_SPOTIFY",
+        spotify: spotify,
+      });
+
+      spotify.getMyTopArtists().then((response) =>
+        dispatch({
+          type: "SET_TOP_ARTISTS",
+          top_artists: response,
+        })
+      );
+
       spotify.getPlaylist("37i9dQZEVXcNJX30pNuwoz").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
