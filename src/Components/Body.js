@@ -8,10 +8,10 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { useDataLayerValue } from "../DataLayer";
 function Body({ spotify }) {
   const [{ discover_weekly, dispatch }] = useDataLayerValue();
-  const playPlaylist = (id) => {
+  const playPlaylist = () => {
     spotify
       .play({
-        context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+        context_uri: `spotify:playlist:37i9dQZEVXcNJX30pNuwoz`,
       })
       .then((response) => {
         spotify.getMyCurrentPlayingTrack().then((res) => {
@@ -28,6 +28,7 @@ function Body({ spotify }) {
   };
 
   const playSong = (id) => {
+    console.log(id);
     spotify.play({ uris: [`spotify:track:${id}`] }).then((response) => {
       spotify.getMyCurrentPlayingTrack().then((r) => {
         dispatch({
